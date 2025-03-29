@@ -1,24 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tyler's First Django/Python Blog</title>
-  </head>
-  <body>
-    <header id="blogHeader">
-      <h1><a href="/">Tyler's First Django/Python Blog</a></h1>
-    </header>
-
-    {% for post in posts %}
-    <div class="contentCard">
-      <article>
-        <h3 class="blogTitle"><a href="">{{ post.title }}</a></h3>
-        <h6 class="blogAuthor">Author: <a href="">{{ post.author }}</a></h6>
-        <p class="blogContent">{{ post.text|linebreaksbr }}</p>
-        <h6 class="blogPublished">Published: {{ post.published_date }}</h6>
-      </article>
+{% extends 'blog/base.html' %} {% block content %} {% for post in posts %}
+<div class="container">
+  <div class="blogPostContainer">
+    <div class="row">
+      <div class="col">
+        <article class="post">
+          <h2 class="title">
+            <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+          </h2>
+          <h6 class="author">Author: <a href="">{{ post.author }}</a></h6>
+          <p class="text">{{ post.text|linebreaksbr }}</p>
+          <h6 class="date">Published: {{ post.published_date }}</h6>
+        </article>
+      </div>
     </div>
-    {% endfor %}
-  </body>
-</html>
+  </div>
+</div>
+{% endfor %} {% endblock %}

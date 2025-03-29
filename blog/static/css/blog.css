@@ -1,0 +1,100 @@
+body {
+  background-image: url("subway-lines.png");
+}
+
+.page-header {
+  background-color: #c25100;
+  margin-top: 0;
+  margin-bottom: 40px;
+  padding: 20px 20px 20px 40px;
+}
+
+.page-header h1,
+.page-header h1 a,
+.page-header h1 a:visited,
+.page-header h1 a:active {
+  color: #ffffff;
+  font-size: 36pt;
+  text-align: center;
+  padding-right: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Lobster", cursive;
+}
+
+.date {
+  color: #645e5e;
+}
+
+.save {
+  float: right;
+}
+
+.post-form textarea,
+.post-form input {
+  width: 100%;
+}
+
+.top-menu,
+.top-menu:hover,
+.top-menu:visited {
+  color: #ffffff;
+  float: right;
+  font-size: 26pt;
+  margin-right: 20px;
+}
+
+.post {
+  margin-bottom: 70px;
+}
+
+.post h2 a,
+.post h2 a:visited {
+  color: #c25100;
+}
+
+.post > .date,
+.post > .actions {
+  float: right;
+}
+
+.btn-secondary,
+.btn-secondary:visited {
+  color: #c25100;
+  background: none;
+  border-color: #c25100;
+  margin-left: 15px;
+}
+
+.btn-secondary:hover {
+  color: #ffffff;
+  background-color: #c25100;
+}
+
+.blogPostContainer {
+  background: rgba(255, 255, 255, 0.575);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.3px);
+  -webkit-backdrop-filter: blur(6.3px);
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  padding: 1rem 2.5rem;
+  margin-bottom: 2.5rem;
+  margin: 0rem 6rem 2.5rem 6rem;
+}
+
+.author a {
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text {
+  color: #000000;
+}
