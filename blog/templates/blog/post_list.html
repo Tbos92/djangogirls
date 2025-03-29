@@ -7,73 +7,18 @@
   </head>
   <body>
     <header id="blogHeader">
-      <h1><a href="/">Tyler's Django Girls Blog</a></h1>
+      <h1><a href="/">Tyler's First Django/Python Blog</a></h1>
     </header>
 
+    {% for post in posts %}
     <div class="contentCard">
       <article>
-        <h3 class="blogTitle"><a href="">Quibusdam, Nihil</a></h3>
-        <h6 class="blogAuthor">Author: <a href="">Jane Doe</a></h6>
-        <p class="blogContent">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Exercitationem, distinctio? Distinctio, aspernatur nulla cupiditate at
-          quas ad cum nihil dolorum provident. Molestiae, rem repellendus
-          voluptates exercitationem cupiditate hic facere inventore ipsam,
-          nesciunt earum quaerat, doloribus ratione aperiam laborum aspernatur
-          dicta? Corporis placeat est ullam obcaecati nisi earum, in autem
-          ducimus dolorum consequatur quis repellendus officiis atque nostrum
-          soluta illo hic vel totam iure! Quibusdam, nihil itaque aspernatur
-          voluptate totam libero iusto. Aperiam nostrum officiis tenetur
-          provident itaque dignissimos maxime nulla. Blanditiis minus tempore,
-          harum deserunt iste, aspernatur suscipit quas qui distinctio
-          voluptatem molestias nam voluptates quo velit reprehenderit nulla
-          impedit? Pariatur, a nemo qui, distinctio ea ab explicabo harum
-          sapiente quod, beatae sunt fuga molestiae commodi recusandae
-          assumenda?
-        </p>
-        <h6 class="blogPublished">Published: 14.06.2014, 12:14</h6>
+        <h3 class="blogTitle"><a href="">{{ post.title }}</a></h3>
+        <h6 class="blogAuthor">Author: <a href="">{{ post.author }}</a></h6>
+        <p class="blogContent">{{ post.text|linebreaksbr }}</p>
+        <h6 class="blogPublished">Published: {{ post.published_date }}</h6>
       </article>
     </div>
-
-    <div class="contentCard">
-      <article>
-        <h3 class="blogTitle"><a href="">Cumque Possimus!</a></h3>
-        <h6 class="blogAuthor">Author :<a href="">Sarah Smith</a></h6>
-        <p class="blogContent">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
-          temporibus labore facere id aspernatur eligendi ratione maxime sequi
-          rerum distinctio est delectus maiores eaque velit commodi sit
-          incidunt, inventore necessitatibus sed enim repellendus impedit?
-          Molestiae praesentium perspiciatis veniam voluptates, dignissimos ea
-          quisquam earum alias doloribus dolor suscipit quia, cumque possimus!
-        </p>
-        <h6 class="blogPublished">Published: 21.06.2014, 15:43</h6>
-      </article>
-    </div>
-
-    <div class="contentCard">
-      <article>
-        <h3 class="blogTitle"><a href="">Hic Optio Ipsam</a></h3>
-        <h6 class="blogAuthor">Author :<a href="">John Hill</a></h6>
-        <p class="blogContent">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
-          excepturi facilis reiciendis soluta repellendus a laborum voluptas
-          cumque, accusamus nisi provident obcaecati optio fuga corrupti nostrum
-          dolorum nam voluptate officia. Laborum hic optio ipsam, unde odio
-          ullam laudantium maiores neque sit dicta accusantium officiis sint
-          odit similique. Obcaecati consequatur nisi sapiente nobis quisquam at
-          sed, nulla sequi magni porro eum rem eius aspernatur laboriosam nam
-          debitis nostrum fugiat ex, ipsa, repellat necessitatibus? Ipsam
-          veritatis qui exercitationem inventore at animi tempore eaque natus
-          autem repellendus similique eos quo provident saepe minima est
-          expedita quisquam iure, quam repudiandae culpa voluptatum. Aspernatur
-          modi numquam quis sed veritatis hic nostrum id iusto a. Architecto,
-          illum. Quos cum harum libero ea non, ut recusandae repellat! Eligendi
-          vitae suscipit commodi velit deserunt nisi, recusandae eius nam eos
-          quasi delectus, amet tempora repudiandae itaque!
-        </p>
-        <h6 class="blogPublished">Published: 03.07.2014, 11:07</h6>
-      </article>
-    </div>
+    {% endfor %}
   </body>
 </html>
